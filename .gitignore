@@ -1,0 +1,12 @@
+*.h5
+tallies.out
+*.ppm
+*.png
+model.xml
+materials.xml
+geometry.xml
+settings.xml
+tallies.xml
+plots.xml
+.ipynb_checkpoints/
+__pycache__/

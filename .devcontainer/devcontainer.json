@@ -1,0 +1,26 @@
+{
+  "name": "OpenMC",
+  "build": { "dockerfile": "Dockerfile" },
+
+  // 2-core / 8 GB machine is enough for teaching problems and stretches the free hours.
+  "hostRequirements": { "cpus": 2, "memory": "8gb" },
+
+  // The OpenMC image is built to run as root (data lives in /root).
+  "remoteUser": "root",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter"],
+      "settings": {
+        "python.defaultInterpreterPath": "/openmc_venv/bin/python",
+        "jupyter.notebookFileRoot": "${fileDirname}"
+      }
+    },
+    "codespaces": {
+      "openFiles": ["notebooks/00_check_setup.ipynb"]
+    }
+  },
+
+  // Quick sanity check printed in the creation log
+  "postCreateCommand": "python -c \"import openmc, os; print('OpenMC', openmc.__version__, '| data:', os.environ.get('OPENMC_CROSS_SECTIONS'))\""
+}

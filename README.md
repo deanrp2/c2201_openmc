@@ -1,6 +1,6 @@
 # OpenMC in the browser (GitHub Codespaces)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/bforget/openmc_cloud?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/deanrp2/openmc_cloud?quickstart=1)
 
 ## For students
 
